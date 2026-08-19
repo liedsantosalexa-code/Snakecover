@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace SnakeGame
 
 {
- Public class Snake
+ public class Snake
  {
    public Queue<Punto>Cuerpo { get; private set; }
    public Punto Cabeza { get; private set; }
@@ -19,22 +19,22 @@ namespace SnakeGame
    Cabeza = new Punto(xInicial, yInicial);
 
    Cuerpo.Enqueue(Cabeza);
-   Cabeza.Dibujar('█');
+   Cabeza.Dibujar("█");
   }
 
   public void Mover(bool comio)
 
   {
-    int nuevoX = Cabeza.X
+    int nuevoX = Cabeza.X;
     int nuevoY = Cabeza.Y;
 
-   if(Direccion == "DERECHA")nuevoX++
+   if(Direccion == "DERECHA")nuevoX++;
    else if(Direccion == "IZQUIERDA")nuevoX--;
    else if(Direccion == "ARRIBA")nuevoY--;
    else if(Direccion == "ABAJO")nuevoY++;
 
   Cabeza = new Punto(nuevoX, nuevoY);
-  Cabeza.Dibujar('█');
+  Cabeza.Dibujar("█");
   Cuerpo.Enqueue(Cabeza);
 
     if (!comio)
@@ -48,14 +48,14 @@ namespace SnakeGame
 
  }
 
-  Public boll ChocoConPared(int anchoMapa, int altoMapa)
+  public bool ChocoConPared(int anchoMapa, int altoMapa)
 
  {
    return Cabeza.X <= 0 || Cabeza.X >= anchoMapa -1 ||
    Cabeza.Y <= 0 || Cabeza.Y >= altoMapa -1;
  }
 
- Public bool ChocoConCuerpo()
+ public bool ChocoConCuerpo()
 
  {
     int coincidencias = 0;
