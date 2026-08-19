@@ -55,6 +55,28 @@ namespace SnakeGame
    Cabeza.Y <= 0 || Cabeza.Y >= altoMapa -1;
  }
 
+ Public bool ChocoConCuerpo()
+
+ {
+    int coincidencias = 0;
+    foreach (var parte in Cuerpo)
+   { 
+     if(parte.X == Cabeza.X && parte.Y == Cabeza.Y)
+      { 
+        
+         coincidencias++;
+       
+      }
+   
+
+
+       }
+         return coincidencias > 1; 
+ 
+
+  }
+ }
+}
 
 
 
