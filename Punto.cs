@@ -15,14 +15,14 @@ namespace SnakeGame
      Y = y;
     }
    
-   public void Dibuja(char simbolo)
-   {
+     public void Dibuja(char simbolo)
+    {
      Console.SetCursorPosition(X, Y);
      Console.Write(Simbolo);
     }
  
-   public void Borrar()
-    {
+    public void Borrar()
+     {
    
       Console.SetCursorPosition(X, Y);
       Console.Write(' ');
