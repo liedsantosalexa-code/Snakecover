@@ -14,7 +14,7 @@ namespace SnakeGame
      int y = random.next(1, altoMapa -1);
 
     Posicion = new Punto (x, y);
-    Posicion.Dibujar(🍓);
+    Posicion.Dibujar('🍓');
   }
 
  }
