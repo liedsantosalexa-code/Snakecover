@@ -12,7 +12,7 @@ namespace SnakeGame
             Console.CursorVisible = false;
 
             int ancho = 40;
-            int alto = 40;
+            int alto = 30;
        
           while (true)
          {
@@ -34,13 +34,13 @@ namespace SnakeGame
                 {
                     var tecla = Console.ReadKey(true).Key;
 
-                    if (tecla == ConsoleKey.W && snake.Direccion != "ABAJO")
+                    if (tecla == ConsoleKey.W)
                         snake.Direccion = "ARRIBA";
-                    else if (tecla == ConsoleKey.Z && snake.Direccion != "ARRIBA")
+                    else if (tecla == ConsoleKey.Z)
                         snake.Direccion = "ABAJO";
-                    else if (tecla == ConsoleKey.A && snake.Direccion != "DERECHA")
+                    else if (tecla == ConsoleKey.A)
                         snake.Direccion = "IZQUIERDA";
-                    else if (tecla == ConsoleKey.D && snake.Direccion != "IZQUIERDA")
+                    else if (tecla == ConsoleKey.D)
                         snake.Direccion = "DERECHA";
                 }
 
@@ -54,6 +54,8 @@ namespace SnakeGame
                 }
 
                 snake.Mover(comio);
+
+                 comida.Posicion.Dibuja("○");
 
                 if (snake.ChocoConPared(ancho, alto) || snake.ChocoConCuerpo())
                 {
