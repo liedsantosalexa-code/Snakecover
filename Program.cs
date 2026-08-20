@@ -12,7 +12,10 @@ namespace SnakeGame
             Console.CursorVisible = false;
 
             int ancho = 40;
-            int alto = 30;
+            int alto = 40;
+       
+          while (true)
+         {
 
             Tablero tablero = new Tablero(ancho, alto);
             tablero.DibujaBordes();
@@ -58,17 +61,15 @@ namespace SnakeGame
                 }
 
                 Thread.Sleep(150);
-            
-
+            }
             Console.SetCursorPosition(2, alto / 2);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write($"¡GAME OVER! Puntaje final: {puntaje} | 
-            Presiona ENTER para reiniciar");
+            Console.Write($"¡GAME OVER! Puntaje final: {puntaje} | Presiona ENTER para reiniciar");
             Console.ResetColor();
            
 
           while (Console.ReadKey(true).Key != ConsoleKey.Enter){}
         }
-        }
+       }
     }
 }
