@@ -77,11 +77,3 @@ namespace SnakeGame
   }
  }
 }
-
-
-
-
-
-
-
-

@@ -15,9 +15,9 @@ namespace SnakeGame
             int alto = 30;
 
             Tablero tablero = new Tablero(ancho, alto);
-            tablero.DibujarBordes();
+            tablero.DibujaBordes();
 
-            Sneak snake = new Snake(10, 10);
+            Snake snake = new Snake(10, 10);
 
             Comida comida = new Comida();
             comida.GenerarNueva(ancho, alto);
@@ -58,13 +58,17 @@ namespace SnakeGame
                 }
 
                 Thread.Sleep(150);
-            }
+            
 
-            Console.SetCursorPosition(10, alto / 2);
+            Console.SetCursorPosition(2, alto / 2);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write($"¡GAME OVER! Puntaje final: {puntaje}");
+            Console.Write($"¡GAME OVER! Puntaje final: {puntaje} | 
+            Presiona ENTER para reiniciar");
             Console.ResetColor();
-            Console.ReadKey();
+           
+
+          while (Console.ReadKey(true).Key != ConsoleKey.Enter){}
+        }
         }
     }
 }
