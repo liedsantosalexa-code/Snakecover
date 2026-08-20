@@ -19,7 +19,7 @@ namespace SnakeGame
    Cabeza = new Punto(xInicial, yInicial);
 
    Cuerpo.Enqueue(Cabeza);
-   Cabeza.Dibujar("█");
+   Cabeza.Dibuja("█");
   }
 
   public void Mover(bool comio)
@@ -34,7 +34,7 @@ namespace SnakeGame
    else if(Direccion == "ABAJO")nuevoY++;
 
   Cabeza = new Punto(nuevoX, nuevoY);
-  Cabeza.Dibujar("█");
+  Cabeza.Dibuja("█");
   Cuerpo.Enqueue(Cabeza);
 
     if (!comio)

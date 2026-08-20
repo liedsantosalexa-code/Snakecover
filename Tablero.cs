@@ -18,46 +18,24 @@ namespace SnakeGame
     Alto = alto;  
    }
 
-   public void DibujarBordes()
+   public void DibujaBordes()
 
  {
     Console.Clear();
     for(int x = 0; x <Ancho; x++)
     {
-      new Punto(x,0).Dibujar("█");
-      new Punto(x, Alto-1).Dibujar("█");
+      new Punto(x,0).Dibuja("█");
+      new Punto(x, Alto-1).Dibuja("█");
 
      }
      
       for(int y = 0; y <Alto; y++)
 
      {
-       new Punto(0, y).Dibujar("█");
-       new Punto(Ancho-1, y).Dibujar("█");
+       new Punto(0, y).Dibuja("█");
+       new Punto(Ancho-1, y).Dibuja("█");
 
       }
     }
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
