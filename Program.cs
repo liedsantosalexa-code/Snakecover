@@ -17,7 +17,7 @@ namespace SnakeGame
             Tablero tablero = new Tablero(ancho, alto);
             tablero.DibujarBordes();
 
-            Sneak snake = new snake(10, 10);
+            Sneak snake = new Snake(10, 10);
 
             Comida comida = new Comida();
             comida.GenerarNueva(ancho, alto);

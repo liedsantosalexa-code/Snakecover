@@ -8,10 +8,10 @@ namespace SnakeGame
   {
    
     public int Ancho { get; }
-    public int Largo { get; }
+    public int Alto { get; }
 
  
-   public Tableto(int ancho, int alto)
+   public Tablero(int ancho, int alto)
   {
   
     Ancho = ancho; 
@@ -24,16 +24,16 @@ namespace SnakeGame
     Console.Clear();
     for(int x = 0; x <Ancho; x++)
     {
-      new Punto(x,0).Dibujar('█');
-      new Punto(x, Alto-1).Dibujar('█');
+      new Punto(x,0).Dibujar("█");
+      new Punto(x, Alto-1).Dibujar("█");
 
      }
      
       for(int y = 0; y <Alto; y++)
 
      {
-       new Punto(0, y).Dibujar('█');
-       new Punto(Ancho-1, y).Dibujar('█');
+       new Punto(0, y).Dibujar("█");
+       new Punto(Ancho-1, y).Dibujar("█");
 
       }
     }

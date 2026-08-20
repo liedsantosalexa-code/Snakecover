@@ -3,7 +3,7 @@ using System;
 namespace SnakeGame
 {
 
-   Public class Punto
+   public class Punto
   {
     public int X { get; set; }
     public int Y { get; set; }
@@ -15,10 +15,10 @@ namespace SnakeGame
      Y = y;
     }
    
-     public void Dibuja(char simbolo)
+     public void Dibuja(string simbolo)
     {
      Console.SetCursorPosition(X, Y);
-     Console.Write(Simbolo);
+     Console.Write(simbolo);
     }
  
     public void Borrar()

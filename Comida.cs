@@ -5,16 +5,16 @@ namespace SnakeGame
 {
    public class Comida
  { 
-  public Punto Posicion { get; Private set; }
+  public Punto Posicion { get; private set; }
   private Random random = new Random();
 
- Public void GenerarNueva(int anchoMapa, int altoMapa)
+ public void GenerarNueva(int anchoMapa, int altoMapa)
   {
-     int x = random.next(1, anchoMapa -1);
-     int y = random.next(1, altoMapa -1);
+     int x = random.Next(1, anchoMapa -1);
+     int y = random.Next(1, altoMapa -1);
 
     Posicion = new Punto (x, y);
-    Posicion.Dibujar('🍓');
+    Posicion.Dibujar("🐭");
   }
 
  }
